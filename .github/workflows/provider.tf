@@ -12,7 +12,7 @@ resource "aws-instance" "AWS-ec2-instance" {
     security_group = ["launch-wizard-1"]
     key_name = "newpem.file.pem"
     tags = {
-        Name = "Rd hate server by terraform"
+        Name = "Rd hate server by terraform1"
     }
 }
 
