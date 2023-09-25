@@ -1,0 +1,30 @@
+name: Terraform Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AKIA3K5R2Q6MJVZVAAXD }}
+          aws-secret-access-key: ${{ secrets.OAGlem0gF/RarOlyKwUw0MD8HueWMZ+xz6X2ISpA }}
+          aws-region: ap-south-1 # Specify your AWS region
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan
+        run: terraform plan
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
