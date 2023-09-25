@@ -18,7 +18,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AKIA3K5R2Q6MJVZVAAXD }}
           aws-secret-access-key: ${{ secrets.OAGlem0gF/RarOlyKwUw0MD8HueWMZ+xz6X2ISpA }}
-          aws-region: ap-south-1 # Specify your AWS region
+          aws-region: ap-south-1
 
       - name: Terraform Init
         run: terraform init
