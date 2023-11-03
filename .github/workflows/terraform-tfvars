@@ -1,0 +1,3 @@
+ami_value = "ami-0c42696027a8ede58"
+instance_type_value = "t2.micro"
+subnet_id_value = "subnet-0143cc718390fad03"
